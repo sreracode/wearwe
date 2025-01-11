@@ -24,8 +24,9 @@ background-color: transparent; /* Sepenuhnya transparan */
 
 
 #collage #stepBox, #collage #timeBox {
-    display:inline-block;
+    display:inline;
     width:48%;
+
 }
 
 #collage #stepBox div {
