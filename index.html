@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<!-- 
+====================================================
+====================================================
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>WeArwe Puzzle Game by Sreracode</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/image-puzzle.css" rel="stylesheet" />
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/image-puzzle.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+body {
+       font-family: 'Courier New', Courier, monospace;
+font-size: 18px; 
+    margin: 0;
+    background-image: url('img/background.jpg'); /* Path ke file background.png */
+    background-size: 750px 350px; /* Lebar 150px dan tinggi 200px */
+    background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+    background-position: right 400px; /* Menempatkan gambar di tengah */
+}
+
+
+   /* Gaya untuk tombol */
+    .btn {
+        background-color: #007bff; /* Warna biru */
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    /* Efek hover pada tombol */
+    .btn:hover {
+        background-color: #0056b3; /* Biru lebih gelap pada hover */
+        transform: translateY(-3px); /* Efek tombol terangkat */
+        box-shadow: 0px 6px 15px rgba(0, 123, 255, 0.5); /* Efek bayangan biru */
+    }
+
+    /* Efek fokus pada tombol (saat tombol diklik) */
+    .btn:focus {
+        outline: none;
+        box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5); /* Fokus dengan bayangan biru */
+    }
+
+</style>
+    <div id="collage">
+        <h2><span class="highlight">weARwe</span> Puzzle Game</h2>
+        <hr />
+        <div id="playPanel" style="padding:5px;display:none;">
+            
+            <div style="display:inline-block; margin:auto; width:95%; vertical-align:top;">
+                <ul id="sortable" class="sortable"></ul>
+                <div id="actualImageBox">
+                    <div id="stepBox">
+                        <div>Count:</div><div class="stepCount">0</div>
+                    </div>
+                    <div id="timeBox">
+                        Time: <span id="timerPanel"></span> seconds
+                    </div>
+                    <img id="actualImage" />
+                    <div>See the picture and solve the puzzle.</div>
+                    <p id="levelPanel">
+                       <!-- <input type="radio" name="level" id="easy" checked="checked" value="3" /> <label for="easy">Easy</label> -->
+                        <input type="radio" name="level" id="medium" checked="checked" value="4" /> <label for="Easy">Easy</label>
+                        <input type="radio" name="level" id="hard" value="5" /> <label for="medium">Medium</label>
+                        <input type="radio" name="level" id="veryhard" value="6" /> <label for="veryhard">Hard</label>
+                    </p>
+                    <div>
+                        <button id="btnRule" type="button" class="btn" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;" onclick="rules();">Rules</button>
+
+<button id="newPhoto" type="button" class="btn" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Next Picture</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="gameOver" style="display:none;">
+            <div style="padding: 5px 10px 20px 10px; text-align: center;">
+                <h2 style="text-align:center";font-weight:bold;>Congratulation !!</h2>
+                You got the picture ready.
+                <br />
+                Time: <span class="stepCount">0</span> gear.
+                <br />
+                Time spent: <span class="timeCount">0</span> seconds<br />
+<br />
+                <div>
+                    
+<button type="button" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;" onclick="window.location.reload(true);">Play more</button>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </div>
+ <img src="img/nft1.png" alt="Gambar" class="corner-image" />
+ <div class="footer-text">Made by Sreracode</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+﻿﻿
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin:0;
+    
+}
+
+h2{
+font-family: 'Courier New', Courier, monospace;
+
+   font-weight:normal;
+   font-weight: semi-bold; /* Membuat font menjadi tebal */
+   font-size: 1.75em;
+   text-align:center;
+}
+
+h3{
+    font-weight:normal;
+    margin:3px 0px;
+    text-align:center;
+}
+
+.highlight {
+    font-size: 1.5em; /* Menetapkan ukuran font lebih besar untuk "WeArwe" */
+    font-weight: bold; /* Opsional, untuk memberi efek tebal pada "WeArwe" */
+}
+
+.corner-image {
+    position: fixed;  /* Menetapkan posisi gambar tetap */
+    bottom: 0;        /* Menempatkan gambar di bagian bawah */
+    left: 0;          /* Menempatkan gambar di sisi kiri */
+    width: 150px;     /* Ukuran gambar (dapat disesuaikan) */
+    height: 150px;    /* Ukuran gambar (dapat disesuaikan) */
+}
+/* Menambahkan teks kecil di tengah bawah */
+        .footer-text {
+            position: fixed;  /* Menetapkan posisi tetap */
+            bottom: 10px;     /* Jarak dari bawah */
+            left: 50%;        /* Menempatkan teks di tengah secara horizontal */
+            transform: translateX(-50%); /* Menyesuaikan agar benar-benar di tengah */
+            font-size: 15px;  /* Ukuran font kecil */
+            color: black;     /* Warna teks */
+        }
+
+ 
